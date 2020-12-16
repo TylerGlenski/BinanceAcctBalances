@@ -19,7 +19,6 @@ type Listing struct{
 	Total string
 }
 func getAccountInfo(apiKey string, secretKey string) ([]Listing, error){
-	// returns a map data structure with assets mapping to three values free locked total
 	// returns a slice of listings
 	
 	returnValue := []Listing{}
@@ -91,8 +90,8 @@ func writeToCSV(balances []Listing) {
 
 func main() {
     // Makes an api call to binance api and writes result to a csv
+	// PUT YOUR API KEY/SECRET HERE! A better way would be to read from env.
 	
-	// PUT YOUR API KEY/SECRET HERE! A better way would be to read from env, or a secret on AWS.
 	apiKey := ""
 	apiSecret := ""
 	
